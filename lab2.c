@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int function(int x){
-	x=x-2;
-	x=function(x);
-	return x;
+int function(int x){ //era bucla infinita 
+	if (x <= 2) return x;
+	x = x - 2;
+	return function(x);
 }
 
 int main(){
